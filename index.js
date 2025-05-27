@@ -83,7 +83,7 @@ fun();
 function displayEle(event){
     container.textContent="";
     const searchEle=event.target.value;
-    const results = arr.filter(item => item.que.toLowerCase().includes(searchEle.toLowerCase()));
+    const results = arr.filter(item => item.que.toLowerCase().startsWith(searchEle.toLowerCase()));
     for(let x of results){
         let con=document.createElement("div");
         con.classList.add("con");
